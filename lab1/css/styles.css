@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    color: gray;
+    color: white;
 }
 
 header, main, nav, footer {
@@ -16,7 +16,7 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 2px;
+    border-bottom: 2px orange solid;
     font-size: 2em;
     transition: .9s;
 }
@@ -24,4 +24,34 @@ nav a:hover {
 main {
     display: flex;
     justify-content: center;
+}
+
+table {
+    margin: 0px auto;
+}
+
+td {
+    padding-right: 10px;
+    font-size: 1.3em;
+}
+
+td strong {
+    color: orange;
+}
+
+#table-header {
+    background-color: #351a00;
+}
+
+.table-row {
+    background-color: #753900;
+}
+ul {
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.hobby {
+    color: yellow;
 }
