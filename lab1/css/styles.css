@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap');
+
 body {
     background-color: black;
     color: white;
@@ -54,4 +57,20 @@ ul {
 
 .hobby {
     color: yellow;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4em;
 }
