@@ -4,15 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>Lab 1: Personal Portfolio</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="css/styles.css">
-
-        <style>
-            /* body {
-                background-color: #000066;;
-            } */
-        </style>
     </head>
 
     <body>
@@ -23,22 +15,23 @@
 
         <hr>
         
+        <!-- page navigation -->
         <nav>
-            <a href="index.html"> Home </a>
-            <a href="about.html"> About </a>
-            <a href="contact.html"> Contact </a>
+            <a href="index.html" class="current">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
         <br><br>
         
         <main>
 
+            <!-- picture and introduction in flexbox-->
             <figure>
-                <!-- TODO: replace picture -->
-                <img src="img/juan_doe.png" alt="a picture of me">
+                <img src="img/otter_crop.jpg" alt="a legitimate picture of me" width="400">
             </figure>
 
-            <div>
+            <div id="introduction">
                 Hello! <br>
                 <p> Thank you for visiting my professional portfolio website.</p>
 
@@ -58,8 +51,9 @@
 
         <footer>
              <hr>
-             <img src="img/csumb_logo.jpg" alt="CSUMB Logo" width="400">
              <br>
+             <img src="img/csumb_logo.jpg" alt="CSUMB Logo" width="400">
+             <br><br>
              CST336 Internet Programming. 2026&copy; Lizarraga <br>
              <strong>Disclaimer:</strong> The information on this webpage is fictitious. <br>
              It is used for academic purposes only.
