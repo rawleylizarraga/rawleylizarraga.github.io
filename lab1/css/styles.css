@@ -74,3 +74,8 @@ h1 {
   font-style: normal;
   font-size: 4em;
 }
+
+footer {
+    font-size: .8em;
+    color: gray;
+}
