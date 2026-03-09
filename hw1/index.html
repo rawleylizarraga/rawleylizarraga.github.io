@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- 2 new HTML tags: <aside> and  -->
+<!-- 2 new HTML tags: <aside> and <article> -->
 <!-- 2 new CSS properties: list-style-type: none and position: fixed -->
 
 <head>
@@ -19,6 +19,7 @@
 
     <div class="layout">
 
+        <!-- sidebar for navigation - remains at fixed position on screen while scrolling -->
         <aside id="sidebar">
             <ul>
                 <li><a href="index.html" class="current">Overview</a></li>
@@ -30,10 +31,13 @@
 
         <main>
 
+            <!-- subheading for this page -->
             <h2 id="heading">Overview</h2>
 
+            <!-- info section with image and text -->
             <article>
 
+                <!-- image put to the left of the text for the index page to reduce need to scroll -->
                 <figure>
                     <img src="img/system.png" alt="Operating System" width="400">
                 </figure>
@@ -71,6 +75,8 @@
     <footer>
         <hr>
         <br>
+        <img src="img/csumb_logo.jpg" alt="CSUMB Logo" width="200">
+        <br><br>
         CST336 Internet Programming. 2026&copy; Lizarraga <br>
         <strong>Disclaimer:</strong> This webpage is for academic purposes only. <br><br>
     </footer>

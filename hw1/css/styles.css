@@ -11,16 +11,6 @@ header, footer {
     text-align: center;
 }
 
-header hr {
-    margin-bottom: 0;
-    border: thick double #32a1ce;
-}
-
-footer hr {
-    margin-top: 0;
-    border: thick double #32a1ce;
-}
-
 main {
     margin: 2em auto;
 }
@@ -40,17 +30,29 @@ article {
     line-height: 1.5em;
 }
 
+p {
+    text-indent: 2em;
+}
+
+/* GLOBAL - HEADER */
+header hr {
+    margin-bottom: 0;
+    border: thick double #32a1ce;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+/* GLOBAL - FOOTER */
 footer {
     font-size: .8em;
     color: gray;
 }
 
-h1 {
-  font-size: 3em;
-}
-
-p {
-    text-indent: 2em;
+footer hr {
+    margin-top: 0;
+    border: thick double #32a1ce;
 }
 
 /* GLOBAL - NAVIGATION BAR */
