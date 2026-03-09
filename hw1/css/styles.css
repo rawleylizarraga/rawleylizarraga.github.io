@@ -33,7 +33,7 @@ aside {
     border-right: thick double #32a1ce;
     border-left: thick double #32a1ce;
     flex-shrink: 0;
-    width: 160px;
+    width: 200px;
 }
 
 ul {
@@ -48,10 +48,16 @@ aside a {
     text-decoration: none;
     color: black;
     font-size: 1em;
+    border-radius: 999px;
+    padding: 4px 10px;
 }
 
 aside a.current {
     color: black;
     font-weight: bold;
     font-size: 1.2em;
+}
+
+aside a:hover {
+    background-color: rgb(247, 247, 227);
 }
