@@ -36,7 +36,7 @@ aside {
     flex-shrink: 0;
     width: 210px;
     position: sticky;
-    top: 12em;
+    top: 25%;
     align-self: flex-start;
 }
 
@@ -64,4 +64,20 @@ aside a.current {
 
 aside a:hover {
     background-color: rgb(247, 247, 227);
+}
+
+@media (max-width: 768px) {
+
+    aside {
+        width: 140px;
+    }
+
+    aside a {
+        font-size: 0.8em;
+    }
+
+    aside a.current {
+    font-size: .9em;
+}
+
 }
