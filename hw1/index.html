@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 2 new HTML tags: <aside> and  -->
+<!-- 2 new CSS properties: list-style-type and flex-shrink -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +12,27 @@
 </head>
 
 <body>
+    <header>
+        <h1>Operating Systems</h1>
+        <hr>
+    </header>
+
+    
 
     <main>
-        <aside id="sidebar">
-
+        <aside id="sidebar_navigation">
+            <ul>
+                <li><a href="index.html" class="current">Operating Systems</a></li>
+                <li><a href="scheduling.html">Process Scheduling</a></li>
+                <li><a href="memory.html">Memory Management</a></li>
+                <li><a href="concurrency.html">Concurrency</a></li>
+            </ul>
         </aside>
 
         <div id="content">
-
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nostrum accusamus provident beatae officiis
+            reprehenderit pariatur cumque mollitia assumenda autem, quasi quisquam excepturi magni? Consequuntur
+            perspiciatis laborum ex accusantium culpa?</p>
         </div>
     </main>
 
