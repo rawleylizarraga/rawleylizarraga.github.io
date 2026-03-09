@@ -25,7 +25,7 @@ main {
     margin: 2em auto;
 }
 
-#content {
+article {
     display: flex;
 }
 
