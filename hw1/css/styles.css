@@ -3,17 +3,12 @@ body {
     background-color: beige;
 }
 
-main {
+.layout {
     display: flex;
 }
 
-header,
-footer {
+header, footer {
     text-align: center;
-}
-
-#content {
-    padding: 5em;
 }
 
 header hr {
@@ -26,16 +21,30 @@ footer hr {
     border: thick double #32a1ce;
 }
 
+main {
+    margin: 2em auto;
+}
+
+#content {
+    display: flex;
+}
+
+#heading {
+    text-align: center;
+}
+
+#summary {
+    width: 800px;
+}
+
 /* GLOBAL - NAVIGATION BAR */
 aside {
     background-color: rgb(207, 207, 187);
     padding: 16px 16px;
-    /* border-right: thick double #32a1ce;
-    border-left: thick double #32a1ce; */
     border: thick double #32a1ce;
     flex-shrink: 0;
     width: 210px;
-    position: sticky;
+    position: fixed;
     top: 25%;
     align-self: flex-start;
 }
@@ -66,6 +75,7 @@ aside a:hover {
     background-color: rgb(247, 247, 227);
 }
 
+/* works better on mobile??? */
 @media (max-width: 768px) {
 
     aside {
@@ -77,7 +87,7 @@ aside a:hover {
     }
 
     aside a.current {
-    font-size: .9em;
-}
+        font-size: .9em;
+    }
 
 }
