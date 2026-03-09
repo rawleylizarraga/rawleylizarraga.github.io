@@ -36,7 +36,7 @@ aside {
     flex-shrink: 0;
     width: 210px;
     position: sticky;
-    top: 12em;
+    top: 25%;
     align-self: flex-start;
 }
 
