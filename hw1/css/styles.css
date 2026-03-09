@@ -31,10 +31,26 @@ main {
 
 #heading {
     text-align: center;
+    font-size: 2em;
 }
 
 #summary {
     width: 800px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+footer {
+    font-size: .8em;
+    color: gray;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+p {
+    text-indent: 2em;
 }
 
 /* GLOBAL - NAVIGATION BAR */
@@ -49,7 +65,7 @@ aside {
     align-self: flex-start;
 }
 
-ul {
+aside ul {
     padding: 0;
     list-style-type: none;
     display: flex;
