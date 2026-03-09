@@ -30,10 +30,14 @@ footer hr {
 aside {
     background-color: rgb(207, 207, 187);
     padding: 16px 16px;
-    border-right: thick double #32a1ce;
-    border-left: thick double #32a1ce;
+    /* border-right: thick double #32a1ce;
+    border-left: thick double #32a1ce; */
+    border: thick double #32a1ce;
     flex-shrink: 0;
-    width: 200px;
+    width: 210px;
+    position: sticky;
+    top: 12em;
+    align-self: flex-start;
 }
 
 ul {
