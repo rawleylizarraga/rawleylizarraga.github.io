@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    /* spaces footer to bottom of page */
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: rgba(245, 245, 220, .85);
+    width: fit-content;
+    margin: auto;
+    padding: 1em;
+    border: 8px ridge blueviolet;
+}
+
+#main {
+    flex: 1;
+    font-size: 1.2rem;
+}
+
+#container {
+    background-color: rgba(240, 248, 255, .85);
+    padding: 1em;
+    width: fit-content;
+    margin: auto;
+    border: 8px ridge blueviolet;
+    /* solid | dashed | dotted | double | groove | ridge | inset | outset */
+}
+
+footer {
+    font-size: .8em;
+    color: gray;
+    background-color: rgba(240, 248, 255, .9);
+}
+
+table {
+    margin: 0px auto;
+    border-collapse: collapse;
+    background-color: ghostwhite;
+}
+
+td {
+    border: 3px solid black;
+    padding: .5em;
+}
+
+/* wasnt using font stuff from #main */
+input {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+button {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+#guessBtn {
+    border-radius: 50%;
+    width: 4.5em;
+    height: 4.5em;
+    margin: 1em;
+    border: 7px double black;
+}
+
+#resetBtn {
+    padding: .3em;
+    border-radius: 10%;
+    margin: 1em;
+    border: 3px solid black;
+}
+
+#feedback {
+    padding: 1em;
+    background-color: beige;
+}

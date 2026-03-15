@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Guess a Number </title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <header>
+        <h1>Guess the Number!</h1>
+        <h2>Guess a number between 1 and 99 in seven attempts!</h2>
+    </header>
+
+    <br><br>
+
+    <div id="main">
+        <div id="container">
+            Enter a guess:
+            <input type="text" id="playerGuess" size="5">
+            <button id="guessBtn"> Guess </button>
+            <br>
+            <button id="resetBtn"> Reset </button>
+            <strong><div id="feedback"></div></strong>
+            <br>
+            <div>
+                Guesses Remaining:
+                <span id="remaining"></span>
+                <br><br>
+                Previous Guesses:
+                <span id="guesses"></span>
+            </div>
+
+            <br>
+
+            <table>
+                <tr>
+                    <td id="winColumn"><strong>Won</strong></td>
+                    <td id="lossColumn"><strong>Lost</strong></td>
+                </tr>
+                <tr>
+                    <td id="gamesWon">0</td>
+                    <td id="gamesLost">0</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <footer>
+        <hr>
+        <br>
+        CST336 Internet Programming. 2026&copy; Lizarraga <br>
+        <strong>Disclaimer:</strong> This webpage is for academic purposes only. <br><br>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
