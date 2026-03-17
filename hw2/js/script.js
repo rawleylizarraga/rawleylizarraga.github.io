@@ -32,7 +32,7 @@ function displayQ8Choices() {
 }
 
 function displayQ10Choices() {
-    let q10ChoicesArray = ["Alaska", "Texas", "California", "Florida"];
+    let q10ChoicesArray = ["Alaska", "Texas", "New Mexico", "Florida"];
     q10ChoicesArray = _.shuffle(q10ChoicesArray);
 
     for (let i = 0; i < q10ChoicesArray.length; i++) {
