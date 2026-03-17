@@ -6,8 +6,19 @@ let score = 0;
 
 let validationFdbk = document.querySelector("#validationFdbk");
 
+displayQ4Choices();
+
 
 // Functions
+function displayQ4Choices() {
+    let q4ChoicesArray = ["Maine", "Rhode Island", "Maryland", "Delaware"];
+    q4ChoicesArray = _.shuffle(q4ChoicesArray);
+    
+    for (let i = 0; i < q4ChoicesArray.length; i++) {
+        document.querySelector("#q4Choices").innerHTML += ` <input type="radio" name="q4" id="${q4ChoicesArray[i]}" value="${q4ChoicesArray[i]}"> <label for="${q4ChoicesArray[i]}"> ${q4ChoicesArray[i]} </label>`
+    }
+}
+
 function isFormValid() {
     let isValid = true;
 
@@ -43,8 +54,10 @@ function gradeQuiz() {
 
     let q1Response = document.querySelector("#q1").value.toLowerCase();
     let q2Response = document.querySelector("#q2").value;
+    let q4Response = document.querySelector("input[name=q4]:checked").value;
     console.log(q1Response);
     console.log(q2Response);
+    console.log(q4Response);
 
     // grade question 1
     if (q1Response == "sacramento") {
@@ -58,6 +71,20 @@ function gradeQuiz() {
         rightAnswer(2);
     } else {
         wrongAnswer(2);
+    }
+
+    // grade question 3
+    if (document.querySelector("#Jefferson").checked && document.querySelector("#Roosevelt").checked && !document.querySelector("#Jackson").checked && !document.querySelector("#Franklin").checked) {
+        rightAnswer(3);
+    } else {
+        wrongAnswer(3);
+    }
+
+    // grade question 4
+    if (q4Response == "Rhode Island") {
+        rightAnswer(4);
+    } else {
+        wrongAnswer(4);
     }
 
 
