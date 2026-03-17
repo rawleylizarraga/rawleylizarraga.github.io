@@ -8,157 +8,162 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore-umd-min.js"> </script>
 </head>
 
-<body class="text-center bg-dark-subtle">
+<body class="text-center bg-light">
 
     <!-- page header -->
     <h1 class="p-5 bg-info bg-gradient">US Geography Quiz</h1>
 
-    <br>
 
-    <!-- first question -->
-    <div class="bg-dark-subtle">
-        <h3><span id="markImg1"></span> 1. What is the capital of California?</h3>
+    <main>
+        <!-- first question -->
+        <div class="bg-dark-subtle">
+            <br>
+            <h3><span id="markImg1"></span> 1. What is the capital of California?</h3>
 
-        <input type="text" id="q1">
+            <input type="text" id="q1">
+            <br><br>
+            <div id="q1Feedback"></div>
+            <br>
+        </div>
+
+        <!-- second question -->
+        <div class="bg-body-secondary">
+            <br>
+            <h3><span id="markImg2"></span> 2. Which is the longest river?</h3>
+
+            <select id="q2">
+                <option value="">Select One</option>
+                <option value="ms">Mississippi</option>
+                <option value="mo">Missouri</option>
+                <option value="co">Colorado</option>
+                <option value="de">Delaware</option>
+            </select>
+            <br><br>
+            <div id="q2Feedback"></div>
+            <br>
+        </div>
+
+        <!-- third question -->
+        <div class="bg-dark-subtle">
+            <br>
+            <h3><span id="markImg3"></span> 3. What presidents are carved into Mount Rushmore?</h3>
+
+            <input type="checkbox" id="Jackson"> <label for="Jackson">A.Jackson</label>
+            <input type="checkbox" id="Franklin"> <label for="Franklin">B.Franklin</label>
+            <input type="checkbox" id="Jefferson"> <label for="Jefferson">T.Jefferson</label>
+            <input type="checkbox" id="Roosevelt"> <label for="Roosevelt">T.Roosevelt</label>
+            <br><br>
+            <div id="q3Feedback"></div>
+            <br>
+        </div>
+
+        <!-- fourth question -->
+        <div class="bg-body-secondary">
+            <br>
+            <h3><span id="markImg4"></span> 4. What is the smallest US state?</h3>
+
+            <div id="q4Choices"></div>
+            <br><br>
+            <div id="q4Feedback"></div>
+            <br>
+        </div>
+
+        <!-- fifth question -->
+        <div class="bg-dark-subtle">
+            <br>
+            <h3><span id="markImg5"></span> 5. Which states are not part of the contiguous US?</h3>
+
+            <input type="checkbox" id="q5Idaho"> <label for="q5Idaho">Idaho</label>
+            <input type="checkbox" id="q5Hawaii"> <label for="q5Hawaii">Hawaii</label>
+            <input type="checkbox" id="q5Alaska"> <label for="q5Alaska">Alaska</label>
+            <input type="checkbox" id="q5Texas"> <label for="q5Texas">Texas</label>
+            <br><br>
+            <div id="q5Feedback"></div>
+            <br>
+        </div>
+
+        <!-- sixth question -->
+        <div class="bg-body-secondary">
+            <br>
+            <h3><span id="markImg6"></span> 6. What is the last name of the president the nation's capital is named
+                after?</h3>
+
+            <input type="text" id="q6">
+            <br><br>
+            <div id="q6Feedback"></div>
+            <br>
+        </div>
+
+        <!-- seventh question -->
+        <div class="bg-dark-subtle">
+            <br>
+            <h3><span id="markImg7"></span> 7. Which of these is the westernmost state?</h3>
+
+            <select id="q7">
+                <option value="">Select One</option>
+                <option value="q7Florida">Florida</option>
+                <option value="q7Ohio">Ohio</option>
+                <option value="q7Oregon">Oregon</option>
+                <option value="q7New Hampshire">New Hampshire</option>
+            </select>
+            <br><br>
+            <div id="q7Feedback"></div>
+            <br>
+        </div>
+
+        <!-- eighth question -->
+        <div class="bg-body-secondary">
+            <br>
+            <h3><span id="markImg8"></span> 8. Which state contains Yosemite National Park?</h3>
+
+            <div id="q8Choices"></div>
+            <br><br>
+            <div id="q8Feedback"></div>
+            <br>
+        </div>
+
+        <!-- ninth question -->
+        <div class="bg-dark-subtle">
+            <br>
+            <h3><span id="markImg9"></span> 9. How many states are there?</h3>
+
+            <select id="q9">
+                <option value="">Select One</option>
+                <option value="36">36</option>
+                <option value="50">50</option>
+                <option value="57">57</option>
+                <option value="72">72</option>
+            </select>
+            <br><br>
+            <div id="q9Feedback"></div>
+            <br>
+        </div>
+
+        <!-- tenth question -->
+        <div class="bg-body-secondary">
+            <br>
+            <h3><span id="markImg10"></span> 10. Which state has the most landmass?</h3>
+
+            <div id="q10Choices"></div>
+            <br><br>
+            <div id="q10Feedback"></div>
+            <br>
+        </div>
+
+        <!-- validation and submit -->
+        <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+        <br>
+        <button class="btn btn-success">Submit Quiz</button>
         <br><br>
-        <div id="q1Feedback"></div>
-        <br>
-    </div>
-
-    <!-- second question -->
-    <div class="bg-body-secondary">
-        <br>
-        <h3><span id="markImg2"></span> 2. Which is the longest river?</h3>
-
-        <select id="q2">
-            <option value="">Select One</option>
-            <option value="ms">Mississippi</option>
-            <option value="mo">Missouri</option>
-            <option value="co">Colorado</option>
-            <option value="de">Delaware</option>
-        </select>
+        <h2 id="totalScore" class="text-info"></h2>
         <br><br>
-        <div id="q2Feedback"></div>
-        <br>
-    </div>
+        <h3 id="totalAttempts"></h3>
 
-    <!-- third question -->
-    <div class="bg-dark-subtle">
-        <br>
-        <h3><span id="markImg3"></span> 3. What presidents are carved into Mount Rushmore?</h3>
-
-        <input type="checkbox" id="Jackson"> <label for="Jackson">A.Jackson</label>
-        <input type="checkbox" id="Franklin"> <label for="Franklin">B.Franklin</label>
-        <input type="checkbox" id="Jefferson"> <label for="Jefferson">T.Jefferson</label>
-        <input type="checkbox" id="Roosevelt"> <label for="Roosevelt">T.Roosevelt</label>
-        <br><br>
-        <div id="q3Feedback"></div>
-        <br>
-    </div>
-
-    <!-- fourth question -->
-    <div class="bg-body-secondary">
-        <br>
-        <h3><span id="markImg4"></span> 4. What is the smallest US state?</h3>
-
-        <div id="q4Choices"></div>
-        <br><br>
-        <div id="q4Feedback"></div>
-        <br>
-    </div>
-
-    <!-- fifth question -->
-    <div class="bg-dark-subtle">
-        <br>
-        <h3><span id="markImg5"></span> 5. Which states are not part of the contiguous US?</h3>
-
-        <input type="checkbox" id="q5Idaho"> <label for="q5Idaho">Idaho</label>
-        <input type="checkbox" id="q5Hawaii"> <label for="q5Hawaii">Hawaii</label>
-        <input type="checkbox" id="q5Alaska"> <label for="q5Alaska">Alaska</label>
-        <input type="checkbox" id="q5Texas"> <label for="q5Texas">Texas</label>
-        <br><br>
-        <div id="q5Feedback"></div>
-        <br>
-    </div>
-
-    <!-- sixth question -->
-    <div class="bg-body-secondary">
-        <br>
-        <h3><span id="markImg6"></span> 6. What is the last name of the president the nation's capital is named after?</h3>
-
-        <input type="text" id="q6">
-        <br><br>
-        <div id="q6Feedback"></div>
-        <br>
-    </div>
-
-    <!-- seventh question -->
-    <div class="bg-dark-subtle">
-        <br>
-        <h3><span id="markImg7"></span> 7. Which of these is the westernmost state?</h3>
-
-        <select id="q7">
-            <option value="">Select One</option>
-            <option value="q7Florida">Florida</option>
-            <option value="q7Ohio">Ohio</option>
-            <option value="q7Oregon">Oregon</option>
-            <option value="q7New Hampshire">New Hampshire</option>
-        </select>
-        <br><br>
-        <div id="q7Feedback"></div>
-        <br>
-    </div>
-
-    <!-- eighth question -->
-    <div class="bg-body-secondary">
-        <br>
-        <h3><span id="markImg8"></span> 8. Which state contains Yosemite National Park?</h3>
-
-        <div id="q8Choices"></div>
-        <br><br>
-        <div id="q8Feedback"></div>
-        <br>
-    </div>
-
-    <!-- ninth question -->
-    <div class="bg-dark-subtle">
-        <br>
-        <h3><span id="markImg9"></span> 9. How many states are there?</h3>
-
-        <select id="q9">
-            <option value="">Select One</option>
-            <option value="36">36</option>
-            <option value="50">50</option>
-            <option value="57">57</option>
-            <option value="72">72</option>
-        </select>
-        <br><br>
-        <div id="q9Feedback"></div>
-        <br>
-    </div>
-
-    <!-- tenth question -->
-    <div class="bg-body-secondary">
-        <br>
-        <h3><span id="markImg10"></span> 10. Which state has the most landmass?</h3>
-
-        <div id="q10Choices"></div>
-        <br><br>
-        <div id="q10Feedback"></div>
-        <br>
-    </div>
-
-    <!-- validation and submit -->
-    <h3 id="validationFdbk" class="bg-danger text-white"></h3>
-    <br>
-    <button class="btn btn-success">Submit Quiz</button>
-    <br><br>
-    <h2 id="totalScore" class="text-info"></h2>
-    <br><br>
-    <h3 id="totalAttempts"></h3>
+    </main>
 
     <footer>
         <hr>
