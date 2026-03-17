@@ -13,6 +13,16 @@ displayQ10Choices();
 
 
 // Functions
+
+// helper function for browser console to clear attempts from storage and reset to 0
+function clearAttempts() {
+    localStorage.setItem("total_attempts", 0);
+    attempts = 0;
+    console.log(`Attempts reset to ${attempts}.`)
+}
+
+
+// randomized multiple choice questions
 function displayQ4Choices() {
     let q4ChoicesArray = ["Maine", "Rhode Island", "Maryland", "Delaware"];
     q4ChoicesArray = _.shuffle(q4ChoicesArray);
@@ -40,6 +50,7 @@ function displayQ10Choices() {
     }
 }
 
+// question validation
 function isFormValid() {
     let isValid = true;
 
@@ -110,9 +121,18 @@ function wrongAnswer(index) {
     document.querySelector(`#markImg${index}`).innerHTML = "<img src='img/xmark.png' alt='xmark'>";
 }
 
+function clearAnswers() {
+    for (let i = 1; i <= 10; i++) {
+        document.querySelector(`#q${i}Feedback`).innerHTML = "";
+        document.querySelector(`#markImg${i}`).innerHTML = "";
+    }
+}
+
+// grader
 function gradeQuiz() {
     console.log("Grading quiz...");
     validationFdbk.innerHTML = "";
+    clearAnswers(); // clears the corect/incorrect info from the page from previous attempts
 
     if (!isFormValid()) {
         console.log("Quiz invalid.");
