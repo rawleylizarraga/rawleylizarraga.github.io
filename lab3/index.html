@@ -9,45 +9,54 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="text-center">
+<body class="text-center bg-body-secondary">
     <main>
         <h1> Sign Up </h1>
-        First Name:<input type="text" name="fName"><br>
-        Last Name: <input type="text" name="lName"><br>
-        Gender:
-        <input type="radio" name="gender" value="m">Male
-        <input type="radio" name="gender" value="f">Female<br><br>
-        Zip Code: <input type="text" id="zip" name="zip"><br>
-        City: <span id="city"></span> <br>
-        Latitude: <span id="latitude"></span><br>
-        Longitude: <span id="longitude"></span><br><br>
 
-        State:
-        <select id="state" name="state">
-            <option>Select One</option>
-            <option value="ca">California</option>
-            <option value="ny">New York</option>
-            <option value="tx">Texas</option>
-        </select> <br>
+        <br>
 
+        <form id="signupForm" action="welcome.html" class="text-start bg-light">
+            First Name: <input type="text" name="fName"><br>
+            Last Name: <input type="text" name="lName"><br>
+            Gender:
+            <input type="radio" name="gender" value="m"> Male
+            <input type="radio" name="gender" value="f"> Female<br><br>
+            Zip Code: <input type="text" id="zip" name="zip"> <span id="zipError"></span> <br>
+            City: <span id="city"></span> <br>
+            Latitude: <span id="latitude"></span><br>
+            Longitude: <span id="longitude"></span><br><br>
 
-        Select a County: <select id="county" disabled> <option> Select County </option> </select><br><br>
-
-
-        Desired Username:
-        <input type="text" id="username"><br>
+            State:
+            <select id="state" name="state">
+                <option>Select One</option>
+                <!-- <option value="ca">California</option>
+                <option value="ny">New York</option>
+                <option value="tx">Texas</option> -->
+            </select> <br>
 
 
-        Password: <input type="password">
-        <span id=”suggestedPwd”></span> <br>
-        Type Password Again: <input type="password"><br>
+            Select a County: <select id="county" disabled>
+                <option> Select County </option>
+            </select><br><br>
 
-        <span id=”passwordError”></span>
 
-        <input type="submit" value="Sign up!">
+            Desired Username:
+            <input type="text" id="username" name="username"><br>
+            <span id="usernameError"></span> <br>
+
+
+            Password: <input id="password" type="password"> <span id="suggestedPwd"></span> <br>
+            Type Password Again: <input id="passwordConfirm" type="password"><br>
+
+            <span id="passwordError"></span><br><br>
+
+            <input type="submit" value="Sign up!">
+        </form>
     </main>
 
-    <footer>
+    <br>
+
+    <footer class="bg-dark-subtle">
         <hr>
         <br>
         CST336 Internet Programming. 2026&copy; Lizarraga <br>

@@ -15,19 +15,55 @@ body {
 
     min-height: 100vh;
     margin: 0;
+
+
+    font-size: 1.2em;
+    line-height: 2em;
+}
+
+h1 {
+    margin: 30px auto;
+    font-size: 3em;
 }
 
 main {
     flex: 1;
+    margin: auto;
+    width: 30%;
 }
-
 
 footer {
     font-size: .8em;
     color: gray;
-    background-color: rgba(240, 248, 255, .9);
+    line-height: 1.5em;
 }
 
 footer hr {
     margin: 0;
+}
+
+input[type="text"],
+input[type="password"] {
+    height: 1.5em;
+    font-size: 1em;
+}
+
+input[type="submit"] {
+    border-radius: 20px;
+    font-size: 1.5em;
+    padding: .2em;
+    border: 3px solid black;
+}
+
+form {
+    border: 2px solid black;
+    padding: 20px;
+}
+
+#suggestedPwd {
+    margin-left: 1em;
+}
+
+#county {
+    min-width: 10em;
 }
