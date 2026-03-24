@@ -13,7 +13,10 @@ let pageNumber = 0;
 let data;
 
 // functions
+
+// validate input and perform fetch
 async function submitSearch(e) {
+    // stop page from refreshing
     e.preventDefault();
 
     resetResults();
@@ -50,6 +53,7 @@ async function submitSearch(e) {
     buttonCheck();
 }
 
+// navigate to previous result
 function previousResult() {
     if (pageNumber > 0) {
         pageNumber--;
@@ -59,6 +63,7 @@ function previousResult() {
     }
 }
 
+// navigate to next result
 function nextResult() {
     if (pageNumber < data.Search.length - 1) {
         pageNumber++;
@@ -68,6 +73,7 @@ function nextResult() {
     }
 }
 
+// update the results from stored data
 function updateResult() {
     // clear the result display first incase something breaks
     document.querySelector("#rTitle").innerHTML = "";
@@ -76,11 +82,8 @@ function updateResult() {
     document.querySelector("#rPoster").innerHTML = "";
 
     document.querySelector("#rTitle").innerHTML = "Title: " + data.Search[pageNumber].Title;
-    document.querySelector("#rTitle").hidden = false;
     document.querySelector("#rYear").innerHTML = "Year: " + data.Search[pageNumber].Year;
-    document.querySelector("#rYear").hidden = false;
     document.querySelector("#rType").innerHTML = "Media Type: " + data.Search[pageNumber].Type;
-    document.querySelector("#rType").hidden = false;
     document.querySelector("#rPoster").innerHTML = `<img src=${data.Search[pageNumber].Poster} width="300" height="450">`;
     document.querySelector("#rAmount").innerHTML = `${pageNumber + 1}/${data.Search.length}`;
     document.querySelector("#rAmount").hidden = false;
@@ -90,8 +93,18 @@ function updateResult() {
     document.querySelector("#next").hidden = false;
 
     document.querySelector("#disclaimer").hidden = false;
+
+    //if (data.totalResults >= 1) {
+        if (data.totalResults >= 10) {
+            document.querySelector("#resultMsg").innerHTML = `${data.totalResults} results found, top ${data.Search.length} displayed.`
+        } else {
+            document.querySelector("#resultMsg").innerHTML = `${data.totalResults} results found.`
+        }
+    //}
+
 }
 
+// check if either of the buttons should be disabled due to reaching edge
 function buttonCheck() {
     if (pageNumber < data.Search.length - 1) {
         document.querySelector("#next").disabled = false;
@@ -105,6 +118,7 @@ function buttonCheck() {
     }
 }
 
+// clear the results and reset page number
 function resetResults() {
     document.querySelector("#errorMsg").innerHTML = "";
 
@@ -120,8 +134,11 @@ function resetResults() {
     document.querySelector("#rAmount").hidden = true;
 
     document.querySelector("#disclaimer").hidden = true;
+
+    document.querySelector("#resultMsg").innerHTML = "";
 }
 
+// reset form inputs and results
 function resetForm() {
     resetResults();
 

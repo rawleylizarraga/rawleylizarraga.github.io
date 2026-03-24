@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -28,6 +39,7 @@ footer {
 #searchForm {
     /* margin: auto 5em auto auto; */
     margin-right: 5em;
+    line-height: 2em;
 }
 
 #results {
@@ -47,7 +59,8 @@ h1 {
     height: fit-content;
     min-width: 50%;
 
-    border: 1em black solid;
+    border: 1px rgb(220, 220, 220) solid;
+    background-color: rgb(240, 240, 240);
 }
 
 #searchForm, #results {
@@ -70,4 +83,12 @@ img {
     max-width: 300px;
     max-height: 450px;
     object-fit: contain;
+}
+
+input[type="text"] {
+    height: 1.5em;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
 }

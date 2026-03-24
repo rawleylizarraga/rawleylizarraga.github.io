@@ -16,6 +16,9 @@
 <body>
 
     <h1>OMDb Media Finder</h1>
+
+    <br><br>
+
     <main>
 
         <div id="container">
@@ -25,7 +28,7 @@
             Release Year (optional): <input type="text" id="qyear" name="y"><br>
 
             Type:
-            <input type="radio" name="type" value="" checked="true"> Any
+            <input type="radio" name="type" value="" checked> Any
             <input type="radio" name="type" value="movie"> Movie
             <input type="radio" name="type" value="series"> Series
             <input type="radio" name="type" value="episode"> Episode
@@ -37,22 +40,26 @@
             <button type="submit"> Search </button>
             <button type="button" id="resetBtn"> Reset </button>
 
+            <br><br>
+
+            <span id="resultMsg"></span>
+
         </form>
 
 
         <div id="results">
             
-            <span id="rTitle" hidden="true"></span> <br>
-            <span id="rYear" hidden="true"></span> <br>
-            <span id="rType" hidden="true"></span> <br>
+            <span id="rTitle"></span> <br>
+            <span id="rYear"></span> <br>
+            <span id="rType"></span> <br>
             <span id="errorMsg"></span> <br>
-            <span id="rPoster"></span> <br>
+            <span id="rPoster"></span> <br> <br>
 
-            <button id="previous" hidden="true" disabled="true"> < </button>
-            <button id="next" hidden="true"> > </button>
+            <button id="previous" hidden disabled> &lt; </button>
+            <button id="next" hidden> &gt; </button>
             <span id="rAmount"></span>
             <br><br>
-            <div id="disclaimer" hidden="true">Results provided via https://www.omdbapi.com/</div>
+            <div id="disclaimer" hidden>Results provided via https://www.omdbapi.com/</div>
         </div>
 
         </div>
