@@ -59,3 +59,15 @@ h1 {
 #disclaimer {
     font-size: .8em;
 }
+
+#errorMsg {
+    color: red;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+img {
+    max-width: 300px;
+    max-height: 450px;
+    object-fit: contain;
+}

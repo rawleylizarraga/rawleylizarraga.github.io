@@ -4,6 +4,7 @@ document.querySelector("#searchForm").addEventListener("submit", function (event
 })
 document.querySelector("#previous").addEventListener("click", previousResult);
 document.querySelector("#next").addEventListener("click", nextResult);
+document.querySelector("#resetBtn").addEventListener("click", resetForm);
 
 // variables
 // using https://www.omdbapi.com/  with a free key
@@ -14,6 +15,13 @@ let data;
 // functions
 async function submitSearch(e) {
     e.preventDefault();
+
+    resetResults();
+
+    if (document.querySelector("#qtitle").value == "") {
+        document.querySelector("#errorMsg").innerHTML = "Error: Please enter a title";
+        return;
+    }
 
     let title = document.querySelector("#qtitle").value;
     let year = document.querySelector("#qyear").value;
@@ -29,10 +37,17 @@ async function submitSearch(e) {
 
     console.log(data);
 
+    if (data.Response == "False") {
+        document.querySelector("#errorMsg").innerHTML = `Error: ${data.Error}`;
+        return;
+    }
+
     updateResult();
 
     console.log(data.Search.length);
     document.querySelector("#rAmount").innerHTML = `${pageNumber + 1}/${data.Search.length}`;
+
+    buttonCheck();
 }
 
 function previousResult() {
@@ -88,4 +103,29 @@ function buttonCheck() {
     } else {
         document.querySelector("#previous").disabled = true;
     }
+}
+
+function resetResults() {
+    document.querySelector("#errorMsg").innerHTML = "";
+
+    document.querySelector("#rTitle").innerHTML = "";
+    document.querySelector("#rYear").innerHTML = "";
+    document.querySelector("#rType").innerHTML = "";
+    document.querySelector("#rPoster").innerHTML = "";
+
+    pageNumber = 0;
+
+    document.querySelector("#previous").hidden = true;
+    document.querySelector("#next").hidden = true;
+    document.querySelector("#rAmount").hidden = true;
+
+    document.querySelector("#disclaimer").hidden = true;
+}
+
+function resetForm() {
+    resetResults();
+
+    document.querySelector("#qtitle").value = "";
+    document.querySelector("#qyear").value = "";
+    document.getElementById("searchForm").reset();
 }
