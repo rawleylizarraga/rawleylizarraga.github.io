@@ -34,6 +34,7 @@ footer hr {
 footer {
     font-size: .8em;
     color: gray;
+    background-color: rgb(240, 240, 240);
 }
 
 #searchForm {
@@ -48,8 +49,11 @@ footer {
 }
 
 h1 {
-    margin: 30px auto;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 3em;
+    border-bottom: 1px lightgray solid;
 }
 
 #container {

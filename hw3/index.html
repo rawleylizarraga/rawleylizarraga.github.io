@@ -16,58 +16,57 @@
 <body>
 
     <h1>OMDb Media Finder</h1>
-
     <br><br>
 
     <main>
 
         <div id="container">
-        <form id="searchForm">
+            <form id="searchForm">
 
-            Title: <input type="text" id="qtitle" name="t"><br>
-            Release Year (optional): <input type="text" id="qyear" name="y"><br>
+                Title: <input type="text" id="qtitle" name="t"><br>
+                Release Year (optional): <input type="text" id="qyear" name="y"><br>
 
-            Type:
-            <input type="radio" name="type" value="" checked> Any
-            <input type="radio" name="type" value="movie"> Movie
-            <input type="radio" name="type" value="series"> Series
-            <input type="radio" name="type" value="episode"> Episode
-            <br>
-            <br>
-
-
-
-            <button type="submit"> Search </button>
-            <button type="button" id="resetBtn"> Reset </button>
-
-            <br><br>
-
-            <span id="resultMsg"></span>
-
-        </form>
+                Type:
+                <input type="radio" name="type" value="" checked> Any
+                <input type="radio" name="type" value="movie"> Movie
+                <input type="radio" name="type" value="series"> Series
+                <input type="radio" name="type" value="episode"> Episode
+                <br>
+                <br>
 
 
-        <div id="results">
-            
-            <span id="rTitle"></span> <br>
-            <span id="rYear"></span> <br>
-            <span id="rType"></span> <br>
-            <span id="errorMsg"></span> <br>
-            <span id="rPoster"></span> <br> <br>
 
-            <button id="previous" hidden disabled> &lt; </button>
-            <button id="next" hidden> &gt; </button>
-            <span id="rAmount"></span>
-            <br><br>
-            <div id="disclaimer" hidden>Results provided via https://www.omdbapi.com/</div>
-        </div>
+                <button type="submit"> Search </button>
+                <button type="button" id="resetBtn"> Reset </button>
+
+                <br><br>
+
+                <span id="resultMsg"></span>
+
+            </form>
+
+
+            <div id="results">
+
+                <span id="rTitle"></span> <br>
+                <span id="rYear"></span> <br>
+                <span id="rType"></span> <br>
+                <span id="errorMsg"></span> <br>
+                <span id="rPoster"></span> <br> <br>
+
+                <button id="previous" hidden disabled> &lt; </button>
+                <button id="next" hidden> &gt; </button>
+                <span id="rAmount"></span>
+                <br><br>
+                <div id="disclaimer" hidden>Results provided via https://www.omdbapi.com/</div>
+            </div>
 
         </div>
     </main>
 
     <br>
 
-    <footer class="bg-dark-subtle">
+    <footer>
         <hr>
         <br>
         CST336 Internet Programming. 2026&copy; Lizarraga <br>
