@@ -34,7 +34,7 @@ async function submitSearch(e) {
     console.log(`Year=${year}`);
     console.log(`Type=${type}`);
 
-    let url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${title}&y=${year}&type=${type}`;
+    let url = `https://www.omdbapi.com/?apikey=${apiKey}&s=${title}&y=${year}&type=${type}`;
     let response = await fetch(url);
     data = await response.json();
 
