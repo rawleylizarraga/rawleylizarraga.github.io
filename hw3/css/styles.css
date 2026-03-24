@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+h1,
+footer {
+    text-align: center;
+}
+
+footer hr {
+    margin: 0;
+}
+
+footer {
+    font-size: .8em;
+    color: gray;
+}
+
+#searchForm {
+    /* margin: auto 5em auto auto; */
+    margin-right: 5em;
+}
+
+#results {
+    /* margin: auto auto auto 5em; */
+    margin-left: 5em;
+}
+
+h1 {
+    margin: 30px auto;
+    font-size: 3em;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+    height: fit-content;
+    min-width: 50%;
+
+    border: 1em black solid;
+}
+
+#searchForm, #results {
+    min-width: 40%;
+    max-width: 40%;
+
+}
+
+#disclaimer {
+    font-size: .8em;
+}
